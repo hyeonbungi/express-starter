@@ -1,10 +1,10 @@
-import app from "./app";
-import dotenv from "dotenv";
-import path from "path";
+import app from './app';
+import dotenv from 'dotenv';
+import path from 'path';
 
-const env = process.env.NODE_ENV || "development";
+const env = process.env.NODE_ENV || 'development';
 
-if (env === "development" || env === "test") {
+if (env === 'development' || env === 'test') {
   const envFilePath = path.resolve(__dirname, `../.env.${env}`);
   dotenv.config({ path: envFilePath });
 }
