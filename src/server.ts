@@ -1,6 +1,6 @@
-import app from './app';
+import path from 'node:path';
 import dotenv from 'dotenv';
-import path from 'path';
+import app from './app';
 
 const env = process.env.NODE_ENV || 'development';
 
