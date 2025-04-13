@@ -1,16 +1,9 @@
-import path from 'node:path';
-import dotenv from 'dotenv';
+import './bootstrap';
 import app from './app';
 
-const env = process.env.NODE_ENV || 'development';
-
-if (env === 'development' || env === 'test') {
-  const envFilePath = path.resolve(__dirname, `../.env.${env}`);
-  dotenv.config({ path: envFilePath });
-}
-
-const PORT = process.env.PORT || 3000;
+const ENV = process.env.NODE_ENV;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT} in ${env} mode`);
+  console.log(`Server is running on port ${PORT} in ${ENV} mode`);
 });
